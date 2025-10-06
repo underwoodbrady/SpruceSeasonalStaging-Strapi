@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_components_buttons",
+  "info": {
+    "displayName": "Button",
+    "icon": "cursor"
+  },
+  "options": {},
+  "attributes": {
+    "ButtonText": {
+      "type": "string"
+    },
+    "ButtonURL": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
