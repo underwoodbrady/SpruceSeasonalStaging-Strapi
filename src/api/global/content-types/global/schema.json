@@ -19,12 +19,6 @@
         "files"
       ]
     },
-    "FooterText": {
-      "type": "string"
-    },
-    "CopyrightText": {
-      "type": "string"
-    },
     "NavigationLinks": {
       "type": "component",
       "component": "components.link",
@@ -34,6 +28,12 @@
       "type": "component",
       "component": "components.button",
       "repeatable": false
+    },
+    "FooterText": {
+      "type": "string"
+    },
+    "CopyrightText": {
+      "type": "string"
     }
   }
 }

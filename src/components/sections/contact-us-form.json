@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_sections_contact_us_forms",
+  "info": {
+    "displayName": "Contact Us Form",
+    "icon": "message"
+  },
+  "options": {},
+  "attributes": {
+    "Introduction": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

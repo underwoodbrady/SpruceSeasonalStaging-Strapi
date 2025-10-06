@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_sections_our_services",
+  "info": {
+    "displayName": "Our Services",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "Heading": {
+      "type": "string"
+    },
+    "Subheading": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -1,20 +1,11 @@
 {
-  "collectionName": "components_sections_about_uses",
+  "collectionName": "components_components_labeled_images",
   "info": {
-    "displayName": "About Us"
+    "displayName": "LabeledImage"
   },
   "options": {},
   "attributes": {
-    "Heading": {
-      "type": "string"
-    },
-    "Description": {
-      "type": "text"
-    },
-    "ButtonText": {
-      "type": "string"
-    },
-    "ButtonLink": {
+    "Label": {
       "type": "string"
     },
     "Image": {

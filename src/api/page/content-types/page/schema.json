@@ -15,7 +15,14 @@
       "type": "dynamiczone",
       "components": [
         "sections.hero",
-        "sections.about-us"
+        "sections.about-us",
+        "sections.the-process",
+        "sections.page-heading",
+        "sections.our-work",
+        "sections.our-services",
+        "sections.meet-the-team",
+        "sections.join-our-mailing-list",
+        "sections.contact-us-form"
       ]
     },
     "slug": {

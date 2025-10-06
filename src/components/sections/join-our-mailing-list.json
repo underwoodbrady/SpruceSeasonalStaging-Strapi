@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_sections_join_our_mailing_lists",
+  "info": {
+    "displayName": "Join Our Mailing List",
+    "icon": "envelop"
+  },
+  "options": {},
+  "attributes": {
+    "Heading": {
+      "type": "string"
+    },
+    "Subheading": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

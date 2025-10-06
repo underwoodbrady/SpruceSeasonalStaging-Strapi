@@ -1,7 +1,8 @@
 {
-  "collectionName": "components_sections_about_uses",
+  "collectionName": "components_sections_meet_the_teams",
   "info": {
-    "displayName": "About Us"
+    "displayName": "Meet The Team",
+    "icon": "user"
   },
   "options": {},
   "attributes": {

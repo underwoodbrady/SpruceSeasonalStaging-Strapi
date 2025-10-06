@@ -1,20 +1,12 @@
 {
-  "collectionName": "components_sections_about_uses",
+  "collectionName": "components_sections_page_headings",
   "info": {
-    "displayName": "About Us"
+    "displayName": "Page Heading",
+    "icon": "bold"
   },
   "options": {},
   "attributes": {
     "Heading": {
-      "type": "string"
-    },
-    "Description": {
-      "type": "text"
-    },
-    "ButtonText": {
-      "type": "string"
-    },
-    "ButtonLink": {
       "type": "string"
     },
     "Image": {

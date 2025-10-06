@@ -480,7 +480,17 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::page.page'> &
       Schema.Attribute.Private;
     PageSections: Schema.Attribute.DynamicZone<
-      ['sections.hero', 'sections.about-us']
+      [
+        'sections.hero',
+        'sections.about-us',
+        'sections.the-process',
+        'sections.page-heading',
+        'sections.our-work',
+        'sections.our-services',
+        'sections.meet-the-team',
+        'sections.join-our-mailing-list',
+        'sections.contact-us-form',
+      ]
     >;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.String;

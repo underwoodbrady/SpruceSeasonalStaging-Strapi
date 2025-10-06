@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_sections_our_works",
+  "info": {
+    "displayName": "Our Work",
+    "icon": "picture"
+  },
+  "options": {},
+  "attributes": {
+    "Image": {
+      "type": "component",
+      "component": "components.labeled-image",
+      "repeatable": true
+    },
+    "ButtonText": {
+      "type": "string"
+    },
+    "ButtonLink": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
