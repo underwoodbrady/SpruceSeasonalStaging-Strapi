@@ -19,6 +19,16 @@
         "files"
       ]
     },
+    "SiteIcon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
     "NavigationLinks": {
       "type": "component",
       "component": "components.link",

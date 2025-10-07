@@ -455,6 +455,7 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
     NavigationButton: Schema.Attribute.Component<'components.button', false>;
     NavigationLinks: Schema.Attribute.Component<'components.link', true>;
     publishedAt: Schema.Attribute.DateTime;
+    SiteIcon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     SiteLogo: Schema.Attribute.Media<'images' | 'files'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

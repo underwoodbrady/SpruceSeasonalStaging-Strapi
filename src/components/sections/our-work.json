@@ -6,7 +6,10 @@
   },
   "options": {},
   "attributes": {
-    "Image": {
+    "Heading": {
+      "type": "string"
+    },
+    "Images": {
       "type": "component",
       "component": "components.labeled-image",
       "repeatable": true

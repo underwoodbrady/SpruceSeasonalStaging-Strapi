@@ -72,6 +72,9 @@ export interface SectionsHero extends Struct.ComponentSchema {
     ButtonLink: Schema.Attribute.String;
     ButtonText: Schema.Attribute.String;
     Heading: Schema.Attribute.String;
+    MobileBackgroundImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
     Subheading: Schema.Attribute.String;
   };
 }
@@ -124,7 +127,8 @@ export interface SectionsOurWork extends Struct.ComponentSchema {
   attributes: {
     ButtonLink: Schema.Attribute.String;
     ButtonText: Schema.Attribute.String;
-    Image: Schema.Attribute.Component<'components.labeled-image', true>;
+    Heading: Schema.Attribute.String;
+    Images: Schema.Attribute.Component<'components.labeled-image', true>;
   };
 }
 

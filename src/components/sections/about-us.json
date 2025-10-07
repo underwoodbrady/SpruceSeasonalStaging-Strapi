@@ -11,12 +11,6 @@
     "Description": {
       "type": "text"
     },
-    "ButtonText": {
-      "type": "string"
-    },
-    "ButtonLink": {
-      "type": "string"
-    },
     "Image": {
       "type": "media",
       "multiple": false,
@@ -26,6 +20,12 @@
         "videos",
         "audios"
       ]
+    },
+    "ButtonText": {
+      "type": "string"
+    },
+    "ButtonLink": {
+      "type": "string"
     }
   },
   "config": {}
