@@ -534,6 +534,38 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiShopifySettingShopifySetting
+  extends Struct.SingleTypeSchema {
+  collectionName: 'shopify_settings';
+  info: {
+    displayName: 'Shopify Settings';
+    pluralName: 'shopify-settings';
+    singularName: 'shopify-setting';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    displayShopLinkInNav: Schema.Attribute.Boolean;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::shopify-setting.shopify-setting'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    purchasingEnabled: Schema.Attribute.Boolean;
+    storeDomain: Schema.Attribute.String;
+    storefrontApiToken: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -1047,6 +1079,7 @@ declare module '@strapi/strapi' {
       'api::global.global': ApiGlobalGlobal;
       'api::image.image': ApiImageImage;
       'api::page.page': ApiPagePage;
+      'api::shopify-setting.shopify-setting': ApiShopifySettingShopifySetting;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

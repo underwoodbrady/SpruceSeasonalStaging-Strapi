@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "shopify_settings",
+  "info": {
+    "singularName": "shopify-setting",
+    "pluralName": "shopify-settings",
+    "displayName": "Shopify Settings"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "storeDomain": {
+      "type": "string"
+    },
+    "storefrontApiToken": {
+      "type": "string"
+    },
+    "displayShopLinkInNav": {
+      "type": "boolean"
+    },
+    "purchasingEnabled": {
+      "type": "boolean"
+    }
+  }
+}
