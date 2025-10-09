@@ -22,10 +22,12 @@
       ]
     },
     "Title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Category": {
       "type": "enumeration",
+      "required": true,
       "enum": [
         "Traditional",
         "Corporate",

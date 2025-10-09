@@ -478,7 +478,8 @@ export interface ApiImageImage extends Struct.CollectionTypeSchema {
   attributes: {
     Category: Schema.Attribute.Enumeration<
       ['Traditional', 'Corporate', 'Whimsical', 'Custom', 'Elegant']
-    >;
+    > &
+      Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -487,7 +488,7 @@ export interface ApiImageImage extends Struct.CollectionTypeSchema {
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::image.image'> &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
-    Title: Schema.Attribute.String;
+    Title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
