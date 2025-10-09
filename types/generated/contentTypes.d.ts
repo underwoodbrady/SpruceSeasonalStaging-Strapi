@@ -455,8 +455,39 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
     NavigationButton: Schema.Attribute.Component<'components.button', false>;
     NavigationLinks: Schema.Attribute.Component<'components.link', true>;
     publishedAt: Schema.Attribute.DateTime;
+    SiteDescription_SEO: Schema.Attribute.String;
     SiteIcon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     SiteLogo: Schema.Attribute.Media<'images' | 'files'>;
+    SiteTitle_SEO: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiImageImage extends Struct.CollectionTypeSchema {
+  collectionName: 'images';
+  info: {
+    displayName: 'Image';
+    pluralName: 'images';
+    singularName: 'image';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Category: Schema.Attribute.Enumeration<
+      ['Traditional', 'Corporate', 'Whimsical', 'Custom', 'Elegant']
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::image.image'> &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    Title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -490,7 +521,8 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'sections.our-services',
         'sections.meet-the-team',
         'sections.join-our-mailing-list',
-        'sections.contact-us-form',
+        'sections.gallery',
+        'sections.service',
       ]
     >;
     publishedAt: Schema.Attribute.DateTime;
@@ -1012,6 +1044,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::global.global': ApiGlobalGlobal;
+      'api::image.image': ApiImageImage;
       'api::page.page': ApiPagePage;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

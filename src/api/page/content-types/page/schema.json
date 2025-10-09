@@ -22,7 +22,8 @@
         "sections.our-services",
         "sections.meet-the-team",
         "sections.join-our-mailing-list",
-        "sections.contact-us-form"
+        "sections.gallery",
+        "sections.service"
       ]
     },
     "slug": {

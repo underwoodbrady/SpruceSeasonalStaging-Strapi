@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_components_labeled_link_images",
+  "info": {
+    "displayName": "LabeledLinkImage"
+  },
+  "options": {},
+  "attributes": {
+    "Label": {
+      "type": "string"
+    },
+    "URL": {
+      "type": "string"
+    },
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

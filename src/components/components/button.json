@@ -9,8 +9,11 @@
     "ButtonText": {
       "type": "string"
     },
-    "ButtonURL": {
+    "ButtonLink": {
       "type": "string"
+    },
+    "ShowButton": {
+      "type": "boolean"
     }
   },
   "config": {}

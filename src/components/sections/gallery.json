@@ -1,15 +1,23 @@
 {
-  "collectionName": "components_sections_our_works",
+  "collectionName": "components_sections_galleries",
   "info": {
-    "displayName": "Our Work",
-    "icon": "picture"
+    "displayName": "Gallery",
+    "icon": "landscape"
   },
   "options": {},
   "attributes": {
     "Heading": {
       "type": "string"
     },
-    "Images": {
+    "GalleryLayout": {
+      "type": "enumeration",
+      "enum": [
+        "Categories",
+        "Grid",
+        "Scroll"
+      ]
+    },
+    "images": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::image.image"

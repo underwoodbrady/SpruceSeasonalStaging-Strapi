@@ -44,6 +44,12 @@
     },
     "CopyrightText": {
       "type": "string"
+    },
+    "SiteTitle_SEO": {
+      "type": "string"
+    },
+    "SiteDescription_SEO": {
+      "type": "string"
     }
   }
 }

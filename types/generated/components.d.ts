@@ -7,8 +7,9 @@ export interface ComponentsButton extends Struct.ComponentSchema {
     icon: 'cursor';
   };
   attributes: {
+    ButtonLink: Schema.Attribute.String;
     ButtonText: Schema.Attribute.String;
-    ButtonURL: Schema.Attribute.String;
+    ShowButton: Schema.Attribute.Boolean;
   };
 }
 
@@ -20,6 +21,18 @@ export interface ComponentsLabeledImage extends Struct.ComponentSchema {
   attributes: {
     Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     Label: Schema.Attribute.String;
+  };
+}
+
+export interface ComponentsLabeledLinkImage extends Struct.ComponentSchema {
+  collectionName: 'components_components_labeled_link_images';
+  info: {
+    displayName: 'LabeledLinkImage';
+  };
+  attributes: {
+    Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    Label: Schema.Attribute.String;
+    URL: Schema.Attribute.String;
   };
 }
 
@@ -48,14 +61,20 @@ export interface SectionsAboutUs extends Struct.ComponentSchema {
   };
 }
 
-export interface SectionsContactUsForm extends Struct.ComponentSchema {
-  collectionName: 'components_sections_contact_us_forms';
+export interface SectionsGallery extends Struct.ComponentSchema {
+  collectionName: 'components_sections_galleries';
   info: {
-    displayName: 'Contact Us Form';
-    icon: 'message';
+    displayName: 'Gallery';
+    icon: 'landscape';
   };
   attributes: {
-    Introduction: Schema.Attribute.String;
+    ButtonText: Schema.Attribute.String;
+    ButtonURL: Schema.Attribute.String;
+    GalleryLayout: Schema.Attribute.Enumeration<
+      ['Categories', 'Grid', 'Scroll']
+    >;
+    Heading: Schema.Attribute.String;
+    images: Schema.Attribute.Relation<'oneToMany', 'api::image.image'>;
   };
 }
 
@@ -113,7 +132,10 @@ export interface SectionsOurServices extends Struct.ComponentSchema {
     icon: 'apps';
   };
   attributes: {
+    ButtonText: Schema.Attribute.String;
+    ButtonURL: Schema.Attribute.String;
     Heading: Schema.Attribute.String;
+    Service: Schema.Attribute.Component<'components.labeled-link-image', true>;
     Subheading: Schema.Attribute.String;
   };
 }
@@ -125,10 +147,10 @@ export interface SectionsOurWork extends Struct.ComponentSchema {
     icon: 'picture';
   };
   attributes: {
-    ButtonLink: Schema.Attribute.String;
     ButtonText: Schema.Attribute.String;
+    ButtonURL: Schema.Attribute.String;
     Heading: Schema.Attribute.String;
-    Images: Schema.Attribute.Component<'components.labeled-image', true>;
+    Images: Schema.Attribute.Relation<'oneToMany', 'api::image.image'>;
   };
 }
 
@@ -139,6 +161,21 @@ export interface SectionsPageHeading extends Struct.ComponentSchema {
     icon: 'bold';
   };
   attributes: {
+    Heading: Schema.Attribute.String;
+    Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
+export interface SectionsService extends Struct.ComponentSchema {
+  collectionName: 'components_sections_services';
+  info: {
+    displayName: 'Service';
+    icon: 'gift';
+  };
+  attributes: {
+    ButtonText: Schema.Attribute.String;
+    ButtonURL: Schema.Attribute.String;
+    Content: Schema.Attribute.RichText;
     Heading: Schema.Attribute.String;
     Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
@@ -158,15 +195,17 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'components.button': ComponentsButton;
       'components.labeled-image': ComponentsLabeledImage;
+      'components.labeled-link-image': ComponentsLabeledLinkImage;
       'components.link': ComponentsLink;
       'sections.about-us': SectionsAboutUs;
-      'sections.contact-us-form': SectionsContactUsForm;
+      'sections.gallery': SectionsGallery;
       'sections.hero': SectionsHero;
       'sections.join-our-mailing-list': SectionsJoinOurMailingList;
       'sections.meet-the-team': SectionsMeetTheTeam;
       'sections.our-services': SectionsOurServices;
       'sections.our-work': SectionsOurWork;
       'sections.page-heading': SectionsPageHeading;
+      'sections.service': SectionsService;
       'sections.the-process': SectionsTheProcess;
     }
   }

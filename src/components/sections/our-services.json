@@ -11,6 +11,17 @@
     },
     "Subheading": {
       "type": "string"
+    },
+    "Service": {
+      "type": "component",
+      "component": "components.labeled-link-image",
+      "repeatable": true
+    },
+    "ButtonText": {
+      "type": "string"
+    },
+    "ButtonURL": {
+      "type": "string"
     }
   },
   "config": {}
